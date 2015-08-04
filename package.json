@@ -1,0 +1,47 @@
+{
+  "name": "grunt-stonejs",
+  "description": "Stone.js Grunt plugin to extract / compile translatable strings",
+  "version": "0.1.0",
+  "homepage": "https://github.com/flozz/grunt-stonejs",
+  "author": {
+    "name": "Fabien LOISON <http://www.flozz.fr/>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flozz/grunt-stonejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flozz/grunt-stonejs/issues"
+  },
+  "licenses": [
+    {
+      "type": "BSD-3-Clause",
+      "url": "https://github.com/flozz/grunt-stonejs/blob/master/LICENSE-BSD-3-Clause"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-jscs": "^2.0.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "translation",
+    "internationalization",
+    "localization",
+    "l10n",
+    "i18n",
+    "stonejs"
+  ]
+}
