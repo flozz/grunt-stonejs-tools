@@ -1,5 +1,6 @@
 # grunt-stonejs-tools
 
+[ ![Build Status](https://api.travis-ci.org/flozz/grunt-stonejs-tools.svg?branch=master) ](https://travis-ci.org/flozz/grunt-stonejs-tools)
 [ ![NPM Version](http://img.shields.io/npm/v/grunt-stonejs-tools.svg?style=flat) ](https://www.npmjs.com/package/grunt-stonejs-tools)
 [ ![License](http://img.shields.io/npm/l/grunt-stonejs-tools.svg?style=flat) ](https://github.com/flozz/grunt-stonejs-tools/blob/master/LICENSE-BSD-3-Clause)
 
