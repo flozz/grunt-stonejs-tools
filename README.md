@@ -75,15 +75,21 @@ Output format for the built catalog.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
 grunt.initConfig({
   stonejs: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    default: {
+      src: ['src/**/*.js', 'src/*.html'],
+      pot: 'locales/catalog.pot',
+      po: ['locales/*.po'],
+      output: 'locales/',
+      options: {
+        quiet: false,
+        functions: ['_', 'gettext', 'lazyGettext'],
+        merge: false,
+        format: 'json'
+      }
+    }
   },
 });
 ```
@@ -98,12 +104,12 @@ grunt.initConfig({
       src: ['src/**/*.js', 'src/*.html'],
       pot: 'locales/catalog.pot',
       po: ['locales/*.po'],
-      output: 'locales/',
+      output: 'locales/catalog.js',
       options: {
         quiet: false,
         functions: ['_', 'gettext', 'lazyGettext'],
         merge: true,
-        format: 'json'
+        format: 'js'
       }
     }
   },
