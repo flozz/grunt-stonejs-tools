@@ -30,20 +30,24 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     stonejs: {
-      default_options: {
+      default: {
+        // Source files (js/html)
+        src: ['test/fixtures/gettext.js', 'test/fixtures/syntax-error.js'],
+        // Translation template (.pot)
+        pot: 'tmp/catalog.pot',
+        // Localised translation files (.po)
+        po: 'tmp/*.po',
+        // Output folder (or file if the `merge` option is set to true)
+        output: 'tmp/catalog.json',
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          // Do not output logs if setted to `true` (default: false)
+          quiet: false,
+          // List of the translation functions (default: ['_', 'gettext', 'lazyGettext'])
+          functions: ['_', 'gettext', 'lazyGettext'],
+          // Merge all locales into a single file if setted to true (default: false)
+          merge: true,
+          // Output format (js or json, default: 'json')
+          format: 'json'
         }
       }
     },
@@ -60,6 +64,14 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      test: {
+        files: [
+          {expand: true, flatten: true, src: ['test/fixtures/*.po'], dest: 'tmp/'}
+        ]
+      }
+    }
+
   });
 
   // Actually load this plugin's task(s).
@@ -68,15 +80,16 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-jscs');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'stonejs', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'copy', 'stonejs' /*, 'nodeunit'*/]);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'jscs'/*, 'test'*/]);
+  grunt.registerTask('default', ['jshint', 'jscs', 'test']);
 
 };
 

@@ -10,41 +10,81 @@
 
 module.exports = function(grunt) {
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+  var stonejs = require('stonejs-tools');
 
   grunt.registerMultiTask('stonejs', 'Stone.js Grunt plugin to extract / compile translatable strings', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
+    var src = grunt.config.get("stonejs")[this.target].src;
+    if (src && !Array.isArray(src)) {
+      src = [src];
+    }
+    var pot = grunt.config.get("stonejs")[this.target].pot;
+    var po = grunt.config.get("stonejs")[this.target].po;
+    if (po && !Array.isArray(po)) {
+      po = [po];
+    }
+    var output = grunt.config.get("stonejs")[this.target].output;
+
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      quiet: false,
+      merge: false,
+      format: 'json',
+      functions: ['_', 'gettext', 'lazyGettext']
     });
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+    var done = this.async();
 
-      // Handle options.
-      src += options.punctuation;
+    function extract() {
+      if (src && pot) {
+        grunt.log.subhead("Extracting strings...");
+        stonejs.extract(src, pot, options, function(error) {
+          if (error) {
+            grunt.fail.fatal(error);
+            done();
+          }
+          else {
+            update();
+          }
+        });
+      } else {
+        update();
+      }
+    }
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
+    function update() {
+      if (pot && po) {
+        grunt.log.subhead("Updating po files...");
+        stonejs.update(po, pot, options, function(error) {
+          if (error) {
+            grunt.fail.fatal(error);
+            done();
+          }
+          else {
+            build();
+          }
+        });
+      } else {
+        build();
+      }
+    }
 
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
-    });
+    function build() {
+      if (po && output) {
+        grunt.log.subhead("Building catalogs...");
+        stonejs.build(po, output, options, function(error) {
+          if (error) {
+            grunt.fail.fatal(error);
+            done();
+          }
+          else {
+            done();
+          }
+        });
+      } else {
+        done();
+      }
+    }
+
+    extract();
   });
 
 };
