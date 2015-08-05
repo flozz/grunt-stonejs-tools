@@ -86,10 +86,10 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'copy', 'stonejs' , 'nodeunit']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'clean', 'copy', 'stonejs' , 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'jscs', 'test']);
+  grunt.registerTask('default', ['test']);
 
 };
 
