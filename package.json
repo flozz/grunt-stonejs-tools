@@ -1,22 +1,22 @@
 {
-  "name": "grunt-stonejs",
+  "name": "grunt-stonejs-tools",
   "description": "Stone.js Grunt plugin to extract / compile translatable strings",
   "version": "0.1.0",
-  "homepage": "https://github.com/flozz/grunt-stonejs",
+  "homepage": "https://github.com/flozz/grunt-stonejs-tools",
   "author": {
     "name": "Fabien LOISON <http://www.flozz.fr/>"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/flozz/grunt-stonejs.git"
+    "url": "git://github.com/flozz/grunt-stonejs-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/flozz/grunt-stonejs/issues"
+    "url": "https://github.com/flozz/grunt-stonejs-tools/issues"
   },
   "licenses": [
     {
       "type": "BSD-3-Clause",
-      "url": "https://github.com/flozz/grunt-stonejs/blob/master/LICENSE-BSD-3-Clause"
+      "url": "https://github.com/flozz/grunt-stonejs-tools/blob/master/LICENSE-BSD-3-Clause"
     }
   ],
   "engines": {
