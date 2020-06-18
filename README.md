@@ -56,9 +56,15 @@ Do not output the stonejs-tools log.
 
 #### options.functions
 Type: `Array`
-Default value: `['_', 'gettext', 'lazyGettext']`
+Default value: `['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_']`
 
 List of the translation functions
+
+#### options.pluralFunctions
+Type: `Array`
+Default value: `['ngettext', 'lazyNgettext']`
+
+List of the translation functions with plural forms support
 
 #### options.merge
 Type: `boolean`
