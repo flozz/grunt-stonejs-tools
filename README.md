@@ -92,7 +92,8 @@ grunt.initConfig({
       output: 'locales/',
       options: {
         quiet: false,
-        functions: ['_', 'gettext', 'lazyGettext'],
+        functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
+        pluralFunctions: ['ngettext', 'lazyNgettext'],
         merge: false,
         format: 'json'
       }
@@ -114,7 +115,8 @@ grunt.initConfig({
       output: 'locales/catalog.js',
       options: {
         quiet: false,
-        functions: ['_', 'gettext', 'lazyGettext'],
+        functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
+        pluralFunctions: ['ngettext', 'lazyNgettext'],
         merge: true,
         format: 'js'
       }
