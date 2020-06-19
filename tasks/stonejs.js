@@ -32,20 +32,20 @@ module.exports = function(grunt) {
 
     var done = this.async();
 
-    function extract() {
-      if (src && pot) {
-        grunt.log.subhead("Extracting strings...");
-        stonejs.extract(src, pot, options, function(error) {
+    function build() {
+      if (po && output) {
+        grunt.log.subhead("Building catalogs...");
+        stonejs.build(po, output, options, function(error) {
           if (error) {
             grunt.fail.fatal(error);
             done();
           }
           else {
-            update();
+            done();
           }
         });
       } else {
-        update();
+        done();
       }
     }
 
@@ -66,20 +66,20 @@ module.exports = function(grunt) {
       }
     }
 
-    function build() {
-      if (po && output) {
-        grunt.log.subhead("Building catalogs...");
-        stonejs.build(po, output, options, function(error) {
+    function extract() {
+      if (src && pot) {
+        grunt.log.subhead("Extracting strings...");
+        stonejs.extract(src, pot, options, function(error) {
           if (error) {
             grunt.fail.fatal(error);
             done();
           }
           else {
-            done();
+            update();
           }
         });
       } else {
-        done();
+        update();
       }
     }
 
