@@ -1,7 +1,7 @@
 {
   "name": "grunt-stonejs-tools",
   "description": "Stone.js Grunt plugin to extract / compile translatable strings",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "homepage": "https://github.com/flozz/grunt-stonejs-tools",
   "author": {
     "name": "Fabien LOISON <http://www.flozz.fr/>"

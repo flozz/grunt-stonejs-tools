@@ -129,6 +129,9 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* **2.O.0:**
+  * Updates to support new stonejs-tools version.
+  * Support of Grunt < 1.0.0 dropped
 * **1.0.2:** Updates peer dependencies to support Grunt 1.0
 * **1.0.1:** Clean useless files in the NPM package
 * **1.0.0:** First release
