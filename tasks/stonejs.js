@@ -28,7 +28,6 @@ module.exports = function(grunt) {
       quiet: false,
       merge: false,
       format: 'json',
-      functions: ['_', 'gettext', 'lazyGettext']
     });
 
     var done = this.async();
