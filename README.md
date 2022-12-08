@@ -106,6 +106,8 @@ grunt.initConfig({
         quiet: false,
         functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
         pluralFunctions: ['ngettext', 'lazyNgettext'],
+        contextFunctions: ['pgettext', 'lazyPgettext'],
+        pluralContextFunctions: ['npgettext', 'lazyNpgettext'],
         merge: false,
         format: 'json'
       }
@@ -129,6 +131,8 @@ grunt.initConfig({
         quiet: false,
         functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
         pluralFunctions: ['ngettext', 'lazyNgettext'],
+        contextFunctions: ['pgettext', 'lazyPgettext'],
+        pluralContextFunctions: ['npgettext', 'lazyNpgettext'],
         merge: true,
         format: 'js'
       }
