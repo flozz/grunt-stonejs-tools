@@ -6,8 +6,10 @@
 
 > Stone.js Grunt plugin to extract / compile translatable strings
 
+
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
+
+This plugin requires Grunt `~1.0.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -21,9 +23,11 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-stonejs-tools');
 ```
 
+
 ## The "stonejs" task
 
 ### Overview
+
 In your project's Gruntfile, add a section named `stonejs` to the data object passed into `grunt.initConfig()`.
 
 ```js
@@ -46,54 +50,70 @@ grunt.initConfig({
 });
 ```
 
+
 ### Options
 
 #### options.quiet
+
 Type: `Boolean
 Default value: `false`
 
 Do not output the stonejs-tools log.
 
+
 #### options.functions
+
 Type: `Array`
 Default value: `['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_']`
 
 List of the translation functions
 
+
 #### options.pluralFunctions
+
 Type: `Array`
 Default value: `['ngettext', 'lazyNgettext']`
 
 List of the translation functions with plural forms support
 
+
 #### options.contextFunctions
+
 Type: `Array`
 Default value: `['pgettext', 'lazyPgettext']`
 
 List of the translation functions with context support
 
+
 #### options.pluralContextFunctions
+
 Type: `Array`
 Default value: `['npgettext', 'lazyNpgettext']`
 
 List of the translation functions with context and plural forms support
 
+
 #### options.merge
+
 Type: `boolean`
 Default value: `false`
 
 Merge all locales into a single file.
 
+
 #### options.format
+
 Type: `String`
 Values: `json` or `js`
 Default value: `'json'`
 
 Output format for the built catalog.
 
+
 ### Usage Examples
 
 #### Default Options
+
 ```js
 grunt.initConfig({
   stonejs: {
@@ -116,7 +136,9 @@ grunt.initConfig({
 });
 ```
 
+
 #### Custom Options
+
 In this example, we output a merged javascript catalog.
 
 ```js
@@ -141,13 +163,19 @@ grunt.initConfig({
 });
 ```
 
+
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
+
 ## Release History
-* **2.O.0:**
+
+* **v2.0.0:**
+
   * Updates to support new stonejs-tools version.
   * Support of Grunt < 1.0.0 dropped
-* **1.0.2:** Updates peer dependencies to support Grunt 1.0
-* **1.0.1:** Clean useless files in the NPM package
-* **1.0.0:** First release
+
+* **v1.0.2:** Updates peer dependencies to support Grunt 1.0
+* **v1.0.1:** Clean useless files in the NPM package
+* **v1.0.0:** First release
