@@ -66,6 +66,18 @@ Default value: `['ngettext', 'lazyNgettext']`
 
 List of the translation functions with plural forms support
 
+#### options.contextFunctions
+Type: `Array`
+Default value: `['pgettext', 'lazyPgettext']`
+
+List of the translation functions with context support
+
+#### options.pluralContextFunctions
+Type: `Array`
+Default value: `['npgettext', 'lazyNpgettext']`
+
+List of the translation functions with context and plural forms support
+
 #### options.merge
 Type: `boolean`
 Default value: `false`
@@ -94,6 +106,8 @@ grunt.initConfig({
         quiet: false,
         functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
         pluralFunctions: ['ngettext', 'lazyNgettext'],
+        contextFunctions: ['pgettext', 'lazyPgettext'],
+        pluralContextFunctions: ['npgettext', 'lazyNpgettext'],
         merge: false,
         format: 'json'
       }
@@ -117,6 +131,8 @@ grunt.initConfig({
         quiet: false,
         functions: ['_', 'gettext', 'lazyGettext', 'gettext_noop', 'N_'],
         pluralFunctions: ['ngettext', 'lazyNgettext'],
+        contextFunctions: ['pgettext', 'lazyPgettext'],
+        pluralContextFunctions: ['npgettext', 'lazyNpgettext'],
         merge: true,
         format: 'js'
       }
