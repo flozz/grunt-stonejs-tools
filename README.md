@@ -7,6 +7,11 @@
 
 > Stone.js Grunt plugin to extract / compile translatable strings
 
+Related projects:
+
+* [stone.js](https://github.com/flozz/stone.js)
+* [stonejs-tools](https://github.com/flozz/stonejs-tools)
+
 
 ## Getting Started
 
@@ -56,7 +61,7 @@ grunt.initConfig({
 
 #### options.quiet
 
-Type: `Boolean
+Type: `Boolean`
 Default value: `false`
 
 Do not output the stonejs-tools log.
@@ -179,7 +184,11 @@ Want to support this project?
 * [❤️ Sponsor me on GitHub](https://github.com/sponsors/flozz>)
 
 
-## Release History
+## Changelog
+
+* **[NEXT]** (changes on `master` but not released yet):
+
+  * Updated dependencies
 
 * **v2.0.0:**
 
