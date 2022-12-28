@@ -25,7 +25,7 @@ npm install grunt-stonejs-tools --save-dev
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
-```js
+```javascript
 grunt.loadNpmTasks('grunt-stonejs-tools');
 ```
 
@@ -36,7 +36,7 @@ grunt.loadNpmTasks('grunt-stonejs-tools');
 
 In your project's Gruntfile, add a section named `stonejs` to the data object passed into `grunt.initConfig()`.
 
-```js
+```javascript
 grunt.initConfig({
   stonejs: {
     your_target: {
@@ -120,7 +120,7 @@ Output format for the built catalog.
 
 #### Default Options
 
-```js
+```javascript
 grunt.initConfig({
   stonejs: {
     default: {
@@ -147,7 +147,7 @@ grunt.initConfig({
 
 In this example, we output a merged javascript catalog.
 
-```js
+```javascript
 grunt.initConfig({
   stonejs: {
     default: {
@@ -188,7 +188,12 @@ Want to support this project?
 
 * **[NEXT]** (changes on `master` but not released yet):
 
+  * Nothing yet ;)
+
+* **v2.1.0:**
+
   * Updated dependencies
+  * Now requires stone-tools >= 1.5.0
 
 * **v2.0.0:**
 
