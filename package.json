@@ -46,6 +46,6 @@
     "stonejs"
   ],
   "dependencies": {
-    "stonejs-tools": "^1.2.0"
+    "stonejs-tools": "^1.5.0"
   }
 }
