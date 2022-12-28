@@ -1,8 +1,9 @@
 # grunt-stonejs-tools
 
-[ ![Build Status](https://api.travis-ci.org/flozz/grunt-stonejs-tools.svg?branch=master) ](https://travis-ci.org/flozz/grunt-stonejs-tools)
-[ ![NPM Version](http://img.shields.io/npm/v/grunt-stonejs-tools.svg?style=flat) ](https://www.npmjs.com/package/grunt-stonejs-tools)
-[ ![License](http://img.shields.io/badge/license-BSD--3--Clause-blue.svg?style=flat) ](https://github.com/flozz/grunt-stonejs-tools/blob/master/LICENSE-BSD-3-Clause)
+[![Lint and test](https://github.com/flozz/grunt-stonejs-tools/actions/workflows/tests.yml/badge.svg)](https://github.com/flozz/grunt-stonejs-tools/actions/workflows/tests.yml)
+[![NPM Version](http://img.shields.io/npm/v/grunt-stonejs-tools.svg?style=flat)](https://www.npmjs.com/package/grunt-stonejs-tools)
+[![License](http://img.shields.io/badge/license-BSD--3--Clause-blue.svg?style=flat)](https://github.com/flozz/grunt-stonejs-tools/blob/master/LICENSE-BSD-3-Clause)
+[![Discord](https://img.shields.io/badge/chat-Discord-8c9eff?logo=discord&logoColor=ffffff)](https://discord.gg/P77sWhuSs4)
 
 > Stone.js Grunt plugin to extract / compile translatable strings
 
