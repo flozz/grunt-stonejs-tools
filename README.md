@@ -170,6 +170,15 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
+## Support this project
+
+Want to support this project?
+
+* [☕️ Buy me a coffee](https://www.buymeacoffee.com/flozz>)
+* [💵️ Give me a tip on PayPal](https://www.paypal.me/0xflozz>)
+* [❤️ Sponsor me on GitHub](https://github.com/sponsors/flozz>)
+
+
 ## Release History
 
 * **v2.0.0:**
